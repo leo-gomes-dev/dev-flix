@@ -1,0 +1,26 @@
+/* Cores padrão para o Modo Dark (Escuro) */
+:root.dark {
+  --bg-color: #141414;
+  --text-color: #ffffff;
+  --card-bg: #1f1f1f;
+  --primary-color: #e50914;
+}
+
+/* Cores padrão para o Modo Light (Claro) */
+:root.light {
+  --bg-color: #f5f5f7;
+  --text-color: #141414;
+  --card-bg: #ffffff;
+  --primary-color: #db0510;
+}
+
+/* Aplica as variáveis globalmente no corpo do site */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  font-family: sans-serif;
+  margin: 0;
+}
