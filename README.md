@@ -27,17 +27,20 @@ Se você deseja testar o projeto localmente, fazer modificações ou criar um *f
 
 Abra o seu terminal e execute o comando abaixo para clonar o projeto: 
 
-bash
+```bash
 
 git clone https://github.com/leo-gomes-dev/dev-flix.git
 
+```
 Use o código com cuidado.
 
 ### 2. Entrar na pasta do projeto
 
-bash
+```bash
 
 cd dev-flix
+
+```
 
 Use o código com cuidado.
 
@@ -45,10 +48,11 @@ Use o código com cuidado.
 
 Certifique-se de ter o Node.js instalado em sua máquina e execute: 
 
-bash
+```bash
 
 npm install
 
+```
 Use o código com cuidado.
 
 ### 4. Configurar as Variáveis de Ambiente (.env)
@@ -64,10 +68,11 @@ Use o código com cuidado.
 
 ### 5. Iniciar o servidor de desenvolvimento
 
-bash
+```bash
 
 npm run dev
 
+```
 Use o código com cuidado.
 
 O Vite abrirá uma porta local (geralmente http://localhost:5173) para você visualizar o projeto rodando. 
