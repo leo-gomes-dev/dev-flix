@@ -55,7 +55,7 @@ export function Layout() {
               Website
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/leo-gomes-dev"
               target="_blank"
               rel="noopener noreferrer"
             >
