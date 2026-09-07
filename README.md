@@ -2,7 +2,7 @@
 
 O **Dev Flix** é uma aplicação web moderna de catálogo de cinema desenvolvida em React, utilizando a ferramenta de build Vite. O projeto consome a API do TMDB (The Movie Database) para listar os filmes em cartaz em tempo real, trazendo uma interface escura inspirada nas principais plataformas de streaming do mercado. 
 
-📱 **[Link do Site Hospedado](https://seu-site-na-vercel.vercel.app)**
+📱 **[Link do Site Hospedado](https://leo-gomes-dev.github.io/dev-flix/#/)**
 📦 **[Link do Repositório Oficial](https://github.com/leo-gomes-dev/dev-flix)** 
 
 ### 📌 Sobre o Projeto (About)

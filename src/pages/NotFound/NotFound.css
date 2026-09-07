@@ -1,0 +1,51 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh; /* Ocupa a maior parte da área útil do Layout */
+  padding: 2rem;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.not-found-code {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  color: #e50914; /* Vermelho Dev Flix */
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.not-found-title {
+  font-size: 1.8rem;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 700;
+}
+
+.not-found-text {
+  color: #aaaaaa;
+  max-width: 450px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.not-found-btn {
+  background-color: #e50914;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.not-found-btn:hover {
+  background-color: #b80710;
+  transform: translateY(-2px);
+}
