@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import "./favoritos.css";
 
 export function Favoritos() {
-  // ✅ FIX: Read localStorage directly in the state initializer function.
-
   const [filmes, setFilmes] = useState(() => {
     const minhaLista = localStorage.getItem("@primeflix");
     return JSON.parse(minhaLista) || [];
   });
 
+  const [confirmarExclusaoId, setConfirmarExclusaoId] = useState(null);
+
   function excluirFilme(id) {
     const filtroFilmes = filmes.filter((filme) => filme.id !== id);
     setFilmes(filtroFilmes);
-
     localStorage.setItem("@primeflix", JSON.stringify(filtroFilmes));
+    setConfirmarExclusaoId(null);
   }
 
   return (
@@ -42,15 +42,36 @@ export function Favoritos() {
               </div>
 
               <div className="favoritos-acoes">
-                <Link to={`/filme/${filme.id}`} className="btn-detalhes">
-                  Ver Detalhes
-                </Link>
-                <button
-                  className="btn-excluir"
-                  onClick={() => excluirFilme(filme.id)}
-                >
-                  Excluir
-                </button>
+                {confirmarExclusaoId === filme.id ? (
+                  <div className="confirmacao-container">
+                    <span className="confirmacao-texto">Tem certeza?</span>
+                    <button
+                      className="btn-confirmar-sim"
+                      onClick={() => excluirFilme(filme.id)}
+                    >
+                      Sim
+                    </button>
+                    <button
+                      className="btn-confirmar-nao"
+                      onClick={() => setConfirmarExclusaoId(null)}
+                    >
+                      Não
+                    </button>
+                  </div>
+                ) : (
+                  // UI Padrão
+                  <>
+                    <Link to={`/filme/${filme.id}`} className="btn-detalhes">
+                      Ver Detalhes
+                    </Link>
+                    <button
+                      className="btn-excluir"
+                      onClick={() => setConfirmarExclusaoId(filme.id)}
+                    >
+                      Excluir
+                    </button>
+                  </>
+                )}
               </div>
             </li>
           ))}

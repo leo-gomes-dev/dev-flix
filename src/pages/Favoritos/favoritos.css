@@ -15,7 +15,6 @@
   padding-left: 15px;
 }
 
-/* Mensagem de lista vazia */
 .favoritos-vazio {
   text-align: center;
   margin-top: 50px;
@@ -42,7 +41,6 @@
   background-color: #b80710;
 }
 
-/* Estrutura da Lista */
 .favoritos-lista {
   list-style: none;
   padding: 0;
@@ -60,7 +58,7 @@
   padding: 15px 20px;
   border-radius: 8px;
   gap: 15px;
-  flex-wrap: wrap; /* Ajuste automático para mobile */
+  flex-wrap: wrap;
 }
 
 .favoritos-filme-info {
@@ -81,9 +79,9 @@
   font-weight: 600;
 }
 
-/* Botões de Ação */
 .favoritos-acoes {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -119,13 +117,76 @@
   color: #ffffff;
 }
 
-/* Responsividade Mobile */
+.confirmacao-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(229, 9, 20, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.confirmacao-texto {
+  font-size: 0.85rem;
+  color: #e50914;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.btn-confirmar-sim {
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-confirmar-sim:hover {
+  background-color: #b80710;
+}
+
+.btn-confirmar-nao {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-confirmar-nao:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 550px) {
   .favoritos-item {
     flex-direction: column;
     align-items: flex-start;
   }
   .favoritos-acoes {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .confirmacao-container {
     width: 100%;
     justify-content: flex-end;
   }
