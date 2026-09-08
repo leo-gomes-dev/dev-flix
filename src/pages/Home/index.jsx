@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { api } from "../../service/api";
-import "./home.css"; // Vamos criar este arquivo abaixo
+import "./home.css";
+import { NavLink } from "react-router-dom";
 
 export function Home() {
   const [filmes, setFilmes] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadApi() {
@@ -14,6 +16,8 @@ export function Home() {
         setFilmes(res.data.results);
       } catch (error) {
         console.error("Erro ao buscar filme", error);
+      } finally {
+        setLoading(false);
       }
     }
     loadApi();
@@ -24,21 +28,37 @@ export function Home() {
       <h1 className="titulo">Filmes em Cartaz</h1>
 
       <div className="grid-filmes">
-        {filmes.map((filme) => (
-          <div key={filme.id} className="card-filme">
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`}
-              alt={filme.title}
-              className="poster-filme"
-            />
-            <div className="info-filme">
-              <span className="nome-filme">{filme.title}</span>
-              <span className="nota-filme">
-                ⭐ {filme.vote_average.toFixed(1)}
-              </span>
-            </div>
-          </div>
-        ))}
+        {loading
+          ? Array.from({ length: 8 }).map((_, index) => (
+              <div key={index} className="card-filme skeleton-card">
+                <div className="skeleton skeleton-poster" />
+                <div className="info-filme">
+                  <div className="skeleton skeleton-text" />
+                  <div className="skeleton skeleton-badge" />
+                </div>
+              </div>
+            ))
+          : filmes.map((filme) => (
+              <NavLink
+                to={`/filme/${filme.id}`}
+                key={filme.id}
+                className="card-filme"
+              >
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`}
+                  alt={filme.title}
+                  className="poster-filme"
+                  loading="lazy"
+                />
+                <div className="info-filme">
+                  <span className="nome-filme">{filme.title}</span>
+                  <span className="nota-filme">
+                    Subtitulo: ⭐{" "}
+                    {filme.vote_average ? filme.vote_average.toFixed(1) : "N/A"}
+                  </span>
+                </div>
+              </NavLink>
+            ))}
       </div>
     </div>
   );

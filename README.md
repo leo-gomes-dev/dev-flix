@@ -1,15 +1,15 @@
-### 🎬 Dev Flix
+### Dev Flix
 
 O **Dev Flix** é uma aplicação web moderna de catálogo de cinema desenvolvida em React, utilizando a ferramenta de build Vite. O projeto consome a API do TMDB (The Movie Database) para listar os filmes em cartaz em tempo real, trazendo uma interface escura inspirada nas principais plataformas de streaming do mercado. 
 
-📱 **[Link do Site Hospedado](https://seu-site-na-vercel.vercel.app)**
-📦 **[Link do Repositório Oficial](https://github.com/leo-gomes-dev/dev-flix)** 
+**[Link do Site Hospedado](https://leo-gomes-dev.github.io/dev-flix/#/)**
+**[Link do Repositório Oficial](https://github.com/leo-gomes-dev/dev-flix)** 
 
-### 📌 Sobre o Projeto (About)
+### Sobre o Projeto (About)
 
 Este projeto foi desenvolvido com o objetivo de consolidar conceitos avançados de desenvolvimento Frontend, focando em requisições assíncronas eficientes, gerenciamento de estado estruturado, rotas dinâmicas e segurança no gerenciamento de chaves de API em ambientes de deploy (Vercel). 
 
-### 🚀 Tecnologias Utilizadas
+### Tecnologias Utilizadas
 
 O ecossistema do projeto foi selecionado para garantir performance, tipagem sutil e carregamento instantâneo: 
 
@@ -27,17 +27,20 @@ Se você deseja testar o projeto localmente, fazer modificações ou criar um *f
 
 Abra o seu terminal e execute o comando abaixo para clonar o projeto: 
 
-bash
+```bash
 
 git clone https://github.com/leo-gomes-dev/dev-flix.git
 
+```
 Use o código com cuidado.
 
 ### 2. Entrar na pasta do projeto
 
-bash
+```bash
 
 cd dev-flix
+
+```
 
 Use o código com cuidado.
 
@@ -45,10 +48,11 @@ Use o código com cuidado.
 
 Certifique-se de ter o Node.js instalado em sua máquina e execute: 
 
-bash
+```bash
 
 npm install
 
+```
 Use o código com cuidado.
 
 ### 4. Configurar as Variáveis de Ambiente (.env)
@@ -64,24 +68,25 @@ Use o código com cuidado.
 
 ### 5. Iniciar o servidor de desenvolvimento
 
-bash
+```bash
 
 npm run dev
 
+```
 Use o código com cuidado.
 
 O Vite abrirá uma porta local (geralmente http://localhost:5173) para você visualizar o projeto rodando. 
 
-### 🔒 Variáveis de Ambiente no Deploy (Vercel)
+### Variáveis de Ambiente no Deploy (Vercel)
 
 Para que o projeto funcione corretamente na Vercel sem expor os seus dados de forma pública no histórico de Commits do GitHub: 
 
 1. Certifique-se de que o arquivo .env está adicionado ao seu .gitignore.
 2. No painel do seu projeto na Vercel, vá em **Settings** > **Environment Variables** e cadastre as chaves VITE_API_BASE_URL e VITE_API_TOKEN com seus respectivos valores de produção.
 
-### 👨‍💻 Desenvolvedor
+### Desenvolvedor
 
-Desenvolvido com 💻 por **Leo Gomes**. 
+Desenvolvido por **Leo Gomes**. 
 
 * **Website Oficial:** [leogomesdev.com](https://leogomesdev.com/)
 * **GitHub:** [@leo-gomes-dev](https://github.com/leo-gomes-dev)
