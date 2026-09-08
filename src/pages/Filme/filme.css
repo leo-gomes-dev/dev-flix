@@ -138,15 +138,14 @@
   gap: 15px;
 }
 
-/* ==========================================
-   ESTILO PADRONIZADO DOS BOTÕES (btn-movie)
-   ========================================== */
+/* btn-movie */
+
 .btn-movie {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 46px; /* Altura idêntica para todos */
+  height: 46px;
   padding: 0 24px;
   border-radius: 6px;
   font-size: 0.95rem;
@@ -171,13 +170,11 @@
   transform: translateY(0);
 }
 
-/* Garante que os ícones fiquem alinhados */
 .btn-movie svg {
   display: block;
   flex-shrink: 0;
 }
 
-/* Variação 1: Trailer (Vermelho Sólido) */
 .btn-trailer {
   background-color: #e50914;
   color: #ffffff;
@@ -197,10 +194,18 @@
 }
 
 .btn-save:hover {
-  background-color: #ffffff;
-  color: #141414;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+.btn-save.active {
+  background-color: #ffffff !important;
+  color: #141414 !important;
+  border-color: #ffffff;
+}
+
+.btn-save.active:hover {
+  background-color: #e0e0e0 !important;
+}
 /* Variação 3: Voltar (Cinza Translúcido) */
 .btn-back {
   background-color: rgba(255, 255, 255, 0.1);

@@ -11,9 +11,9 @@ export function Favoritos() {
   });
 
   function excluirFilme(id) {
-    const filtroFilmes = filmes.filter((item) => item.id !== id);
-
+    const filtroFilmes = filmes.filter((filme) => filme.id !== id);
     setFilmes(filtroFilmes);
+
     localStorage.setItem("@primeflix", JSON.stringify(filtroFilmes));
   }
 
@@ -46,8 +46,8 @@ export function Favoritos() {
                   Ver Detalhes
                 </Link>
                 <button
-                  onClick={() => excluirFilme(filme.id)}
                   className="btn-excluir"
+                  onClick={() => excluirFilme(filme.id)}
                 >
                   Excluir
                 </button>
