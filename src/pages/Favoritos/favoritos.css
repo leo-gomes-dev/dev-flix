@@ -1,0 +1,132 @@
+.favoritos-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 80vh;
+  color: #ffffff;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.favoritos-titulo {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  border-left: 5px solid #e50914;
+  padding-left: 15px;
+}
+
+/* Mensagem de lista vazia */
+.favoritos-vazio {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.favoritos-vazio p {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+.btn-buscar-filmes {
+  display: inline-block;
+  background-color: #e50914;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-buscar-filmes:hover {
+  background-color: #b80710;
+}
+
+/* Estrutura da Lista */
+.favoritos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.favoritos-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f23;
+  padding: 15px 20px;
+  border-radius: 8px;
+  gap: 15px;
+  flex-wrap: wrap; /* Ajuste automático para mobile */
+}
+
+.favoritos-filme-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.favoritos-poster {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.favoritos-nome {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Botões de Ação */
+.favoritos-acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-detalhes {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-detalhes:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-excluir {
+  background-color: transparent;
+  color: #e50914;
+  border: 1px solid #e50914;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-excluir:hover {
+  background-color: #e50914;
+  color: #ffffff;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 550px) {
+  .favoritos-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .favoritos-acoes {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

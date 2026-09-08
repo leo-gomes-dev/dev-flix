@@ -12,7 +12,7 @@ export function Layout() {
         </div>
 
         <nav className="nav">
-          {location !== "/" && (
+          {location.pathname !== "/" && (
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -22,14 +22,14 @@ export function Layout() {
               Início
             </NavLink>
           )}
-          {location !== "/filme" && (
+          {location.pathname !== "/favoritos" && (
             <NavLink
-              to="/filme"
+              to="favoritos"
               className={({ isActive }) =>
                 isActive ? "nav-link active" : "nav-link"
               }
             >
-              Filmes
+              Favoritos
             </NavLink>
           )}
         </nav>
